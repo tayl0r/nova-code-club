@@ -15,14 +15,14 @@
     }
 
     :root {
-      --bg: #07060e;
-      --surface: #110f1f;
-      --neon-green: #00ffaa;
-      --neon-pink: #ff2d78;
-      --neon-yellow: #ffe14d;
-      --neon-blue: #4d9aff;
-      --text: #d8d4e8;
-      --text-dim: #7a7490;
+      --bg: #ffffff;
+      --surface: #f5f5f7;
+      --neon-green: #00995e;
+      --neon-pink: #d6246e;
+      --neon-yellow: #c49500;
+      --neon-blue: #2a6fcc;
+      --text: #2a2a2a;
+      --text-dim: #6b6b6b;
       --pixel-font: 'Press Start 2P', monospace;
       --body-font: 'Outfit', sans-serif;
     }
@@ -49,8 +49,8 @@
       width: 100%;
       height: 100%;
       background-image:
-        linear-gradient(rgba(0, 255, 170, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 255, 170, 0.03) 1px, transparent 1px);
+        linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
       background-size: 48px 48px;
       pointer-events: none;
       z-index: 0;
@@ -94,9 +94,9 @@
     .page {
       position: relative;
       z-index: 1;
-      max-width: 780px;
+      max-width: 960px;
       margin: 0 auto;
-      padding: 3rem 2rem 2rem;
+      padding: 2.5rem 2rem 2rem;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -115,10 +115,10 @@
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--neon-green);
-      border: 1px solid rgba(0, 255, 170, 0.3);
+      border: 1px solid rgba(0, 153, 94, 0.3);
       padding: 0.4em 1.2em;
       margin-bottom: 1.5rem;
-      background: rgba(0, 255, 170, 0.05);
+      background: rgba(0, 153, 94, 0.06);
       animation: fadeInDown 0.8s ease-out;
     }
 
@@ -127,13 +127,12 @@
       font-size: clamp(1.8rem, 6vw, 3.2rem);
       line-height: 1.4;
       color: #fff;
-      text-shadow:
-        0 0 20px rgba(0, 255, 170, 0.4),
-        0 0 60px rgba(0, 255, 170, 0.15);
+      text-shadow: none;
       animation: fadeInUp 0.8s ease-out;
       margin-bottom: 0.3em;
     }
 
+    .title { color: #1a1a1a; }
     .title .accent-green { color: var(--neon-green); }
     .title .accent-pink { color: var(--neon-pink); }
 
@@ -148,7 +147,7 @@
     /* --- Hook section --- */
     .hook {
       text-align: center;
-      margin-bottom: 3rem;
+      margin-bottom: 2.5rem;
       animation: fadeInUp 0.8s ease-out 0.3s both;
     }
 
@@ -156,7 +155,7 @@
       font-size: clamp(1.6rem, 4vw, 2.4rem);
       font-weight: 700;
       line-height: 1.3;
-      background: linear-gradient(135deg, var(--neon-green), var(--neon-blue));
+      background: linear-gradient(135deg, #00875a, #2a6fcc);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -175,7 +174,7 @@
 
     /* --- How it works --- */
     .how-it-works {
-      margin-bottom: 3rem;
+      margin-bottom: 2.5rem;
       animation: fadeInUp 0.8s ease-out 0.45s both;
     }
 
@@ -185,16 +184,16 @@
       letter-spacing: 0.25em;
       text-transform: uppercase;
       color: var(--neon-pink);
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
     }
 
     .steps {
       display: grid;
       gap: 1px;
-      background: rgba(255, 255, 255, 0.04);
+      background: rgba(0, 0, 0, 0.02);
       border-radius: 12px;
       overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(0, 0, 0, 0.08);
     }
 
     .step {
@@ -202,13 +201,13 @@
       grid-template-columns: 3.5rem 1fr;
       align-items: center;
       gap: 1rem;
-      padding: 1.3rem 1.5rem;
+      padding: 1rem 1.5rem;
       background: var(--surface);
       transition: background 0.3s ease;
     }
 
     .step:hover {
-      background: rgba(17, 15, 31, 0.8);
+      background: #ececee;
     }
 
     .step-icon {
@@ -219,29 +218,29 @@
       justify-content: center;
       border-radius: 8px;
       font-size: 1.3rem;
-      background: rgba(0, 255, 170, 0.08);
-      border: 1px solid rgba(0, 255, 170, 0.15);
+      background: rgba(0, 153, 94, 0.08);
+      border: 1px solid rgba(0, 153, 94, 0.2);
     }
 
     .step:nth-child(2) .step-icon {
-      background: rgba(255, 45, 120, 0.08);
-      border-color: rgba(255, 45, 120, 0.15);
+      background: rgba(214, 36, 110, 0.08);
+      border-color: rgba(214, 36, 110, 0.2);
     }
 
     .step:nth-child(3) .step-icon {
-      background: rgba(77, 154, 255, 0.08);
-      border-color: rgba(77, 154, 255, 0.15);
+      background: rgba(42, 111, 204, 0.08);
+      border-color: rgba(42, 111, 204, 0.2);
     }
 
     .step:nth-child(4) .step-icon {
-      background: rgba(255, 225, 77, 0.08);
-      border-color: rgba(255, 225, 77, 0.15);
+      background: rgba(196, 149, 0, 0.08);
+      border-color: rgba(196, 149, 0, 0.2);
     }
 
     .step-content h3 {
       font-size: 0.95rem;
       font-weight: 600;
-      color: #fff;
+      color: #1a1a1a;
       margin-bottom: 0.25rem;
     }
 
@@ -254,7 +253,7 @@
 
     /* --- Details grid --- */
     .details {
-      margin-bottom: 3rem;
+      margin-bottom: 2.5rem;
       animation: fadeInUp 0.8s ease-out 0.6s both;
     }
 
@@ -262,14 +261,14 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       gap: 1px;
-      background: rgba(255, 255, 255, 0.04);
+      background: rgba(0, 0, 0, 0.02);
       border-radius: 12px;
       overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(0, 0, 0, 0.08);
     }
 
     .detail-card {
-      padding: 1.5rem;
+      padding: 1rem;
       background: var(--surface);
       text-align: center;
     }
@@ -286,7 +285,7 @@
     .detail-card .value {
       font-size: 1.15rem;
       font-weight: 600;
-      color: #fff;
+      color: #1a1a1a;
     }
 
     .detail-card:nth-child(1) .value { color: var(--neon-green); }
@@ -297,18 +296,18 @@
     /* --- No experience callout --- */
     .callout {
       text-align: center;
-      padding: 2rem;
+      padding: 1.2rem;
       border-radius: 12px;
-      background: linear-gradient(135deg, rgba(0, 255, 170, 0.06), rgba(77, 154, 255, 0.06));
-      border: 1px solid rgba(0, 255, 170, 0.12);
-      margin-bottom: 3rem;
+      background: linear-gradient(135deg, rgba(0, 153, 94, 0.06), rgba(42, 111, 204, 0.06));
+      border: 1px solid rgba(0, 153, 94, 0.15);
+      margin-bottom: 2.5rem;
       animation: fadeInUp 0.8s ease-out 0.75s both;
     }
 
     .callout-text {
       font-size: 1.15rem;
       font-weight: 600;
-      color: #fff;
+      color: #1a1a1a;
       margin-bottom: 0.4rem;
     }
 
@@ -320,10 +319,16 @@
 
     /* --- Footer --- */
     .footer {
-      margin-top: auto;
-      padding-top: 2rem;
+      margin-top: 0;
+      padding-top: 1rem;
       text-align: center;
       animation: fadeInUp 0.8s ease-out 0.9s both;
+    }
+
+    .club-leader {
+      font-size: 0.92rem;
+      color: var(--text-dim);
+      margin-bottom: 0.75rem;
     }
 
     .powered-by {
@@ -336,9 +341,9 @@
       text-transform: uppercase;
       color: var(--text-dim);
       padding: 0.6em 1.4em;
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(0, 0, 0, 0.1);
       border-radius: 6px;
-      background: rgba(255, 255, 255, 0.02);
+      background: rgba(0, 0, 0, 0.02);
     }
 
     .powered-by .dot {
@@ -346,7 +351,7 @@
       height: 6px;
       border-radius: 50%;
       background: var(--neon-green);
-      box-shadow: 0 0 8px var(--neon-green);
+      box-shadow: none;
       animation: pulse 2s ease-in-out infinite;
     }
 
@@ -376,9 +381,9 @@
 
     /* --- Print --- */
     @media print {
-      body {
-        background: #fff;
-        color: #1a1a1a;
+      @page {
+        size: letter;
+        margin: 0.4in;
       }
 
       body::before,
@@ -387,83 +392,26 @@
       }
 
       .page {
-        padding: 0.5in;
+        padding: 0;
         max-width: none;
-      }
-
-      .title {
-        color: #1a1a1a;
-        text-shadow: none;
-        font-size: 2rem;
-      }
-
-      .title .accent-green,
-      .title .accent-pink {
-        -webkit-text-fill-color: #1a1a1a;
+        min-height: auto;
       }
 
       .hook-text {
         -webkit-text-fill-color: #1a1a1a;
         color: #1a1a1a;
+        background: none;
       }
 
-      .subtitle,
-      .hook-sub,
-      .step-content p,
-      .callout-sub {
-        color: #555;
-      }
-
-      .section-label {
-        color: #1a1a1a;
-      }
-
-      .steps,
-      .details-grid,
-      .callout {
-        border-color: #ccc;
-        background: #f5f5f5;
-      }
-
-      .step,
-      .detail-card {
-        background: #fff;
-      }
-
-      .step-icon {
-        background: #f0f0f0;
-        border-color: #ccc;
-      }
-
-      .step-content h3,
-      .callout-text {
-        color: #1a1a1a;
-      }
-
-      .detail-card .value {
-        color: #1a1a1a !important;
-      }
-
-      .detail-card .label {
-        color: #555;
-      }
-
-      .badge {
-        color: #1a1a1a;
-        border-color: #ccc;
-        background: #f5f5f5;
-      }
-
-      .powered-by {
-        color: #555;
-        border-color: #ccc;
-      }
-
-      .powered-by .dot {
-        background: #1a1a1a;
-        box-shadow: none;
-        animation: none;
-      }
+      .header { margin-bottom: 0.5rem; }
+      .hook { margin-bottom: 1.4rem; }
+      .how-it-works { margin-bottom: 1.4rem; }
+      .details { margin-bottom: 1.4rem; }
+      .callout { margin-bottom: 1.1rem; padding: 1rem; }
+      .step { padding: 0.85rem 1.2rem; }
+      .detail-card { padding: 0.9rem; }
+      .section-label { margin-bottom: 0.85rem; }
+      .footer { padding-top: 1.1rem; }
 
       * {
         animation: none !important;
@@ -489,7 +437,6 @@
   <div class="page">
     <!-- Header -->
     <header class="header">
-      <div class="badge">Middle School Coding Club</div>
       <h1 class="title">
         <span class="accent-green">NOVA</span> Code Club
       </h1>
@@ -500,7 +447,7 @@
     <section class="hook">
       <p class="hook-text">Build Your Own Web Game Using AI</p>
       <p class="hook-sub">
-        Every student gets their own game project. No coding experience needed.
+        Every student (or team of students) gets their own game project. No coding experience needed.
         Describe what you want to build, and watch AI bring it to life — right in front of you.
       </p>
     </section>
@@ -520,7 +467,7 @@
           <div class="step-icon">⚡</div>
           <div class="step-content">
             <h3>Build it live</h3>
-            <p>Each Friday, we feed your ideas to AI and build your game in real-time.</p>
+            <p>Each Thursday, we feed your ideas to AI and build your game in real-time.</p>
           </div>
         </div>
         <div class="step">
@@ -531,10 +478,17 @@
           </div>
         </div>
         <div class="step">
+          <div class="step-icon">🎨</div>
+          <div class="step-content">
+            <h3>Art & sound</h3>
+            <p>Create your own or ask AI to generate using basic primitives. 2D, 3D, pixel art, anything goes!</p>
+          </div>
+        </div>
+        <div class="step">
           <div class="step-icon">🎮</div>
           <div class="step-content">
             <h3>Play your game</h3>
-            <p>After 8 weeks, you'll have a real, playable web game that you designed.</p>
+            <p>Every week your latest game build is deployed to GitHub where anyone can play it.</p>
           </div>
         </div>
       </div>
@@ -546,7 +500,7 @@
       <div class="details-grid">
         <div class="detail-card">
           <div class="label">When</div>
-          <div class="value">Fridays</div>
+          <div class="value">Thursdays</div>
         </div>
         <div class="detail-card">
           <div class="label">Time</div>
@@ -571,6 +525,7 @@
 
     <!-- Footer -->
     <footer class="footer">
+      <p class="club-leader">Club Leader: Taylor Steil — Parent & Game Developer / Software Engineer</p>
       <div class="powered-by">
         <span class="dot"></span>
         Powered by Claude Code Max
